@@ -1,0 +1,36 @@
+@import "variables";
+@import "functions/breakpoints";
+@import "functions/rem";
+@import "functions/em";
+@import "mixins/mixins";
+@import "mixins/breakpoints";
+@import "mixins/grid";
+@import "mixins/iconfont";
+
+@import "normalize";
+@import "fonts";
+@import "base";
+
+// BLOCKS
+@import "blocks/container";
+@import "blocks/row";
+@import "blocks/col";
+@import "blocks/btn";
+@import "blocks/section-card";
+@import "blocks/card";
+@import "blocks/article";
+@import "blocks/projects";
+
+// HEADER BLOCKS
+@import "blocks/header/hamburger";
+@import "blocks/header/header";
+@import "blocks/header/logo";
+@import "blocks/header/menu";
+@import "blocks/header/slogan";
+
+// FOOTER BLOCKS
+@import "blocks/footer/footer";
+@import "blocks/footer/socials";
+
+// COMPONENTS
+@import "components/slick/slick";

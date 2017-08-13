@@ -1,0 +1,135 @@
+/* CARD */
+
+.card {
+	$font-size-lg: 76.08;
+	$font-size-md: 85.59;
+	$card-p-lr: 25;
+	$card-p-t: 68;
+	$card-p-b: 51;
+	
+	background-color: #fff;
+	text-align: center;
+	transition: box-shadow .3s ease 0s;
+	max-width: 369px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq-down(sm) {
+		font-size: 100%;
+		padding: rem($card-p-t) rem($card-p-lr) rem($card-p-b);
+	}
+	
+	@include mq-only(md) {
+		font-size: $font-size-md+%;
+		padding: rem($card-p-t / 100 * $font-size-md) rem($card-p-lr / 100 * $font-size-md) rem($card-p-b / 100 * $font-size-md);
+	}
+	
+	@include mq-only(lg) {
+		font-size: $font-size-lg+%;
+		padding: rem($card-p-t / 100 * $font-size-lg) rem($card-p-lr / 100 * $font-size-lg) rem($card-p-b / 100 * $font-size-lg);
+	}
+	
+	@include mq-up(xl) {
+		font-size: 100%;
+		padding: $card-p-t+px $card-p-lr+px $card-p-b+px;
+	}
+	
+	&:hover {
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+	}
+	
+	
+	&__ico {
+		$m-b: 22;
+		
+		font-size: em(100);
+		color: $color-blue;
+
+		@include mq-down(sm) {
+			margin-bottom: rem($m-b);
+		}
+		@include mq-only(md) {
+			margin-bottom: rem($m-b / 100 * $font-size-md);
+		}
+		@include mq-only(lg) {
+			margin-bottom: rem($m-b / 100 * $font-size-lg);
+		}
+		@include mq-up(xs) {
+			margin-bottom: $m-b+px;
+		}
+		
+		&:after {
+			display: block;
+		}
+		
+		
+		&_compass {
+			@include icon('compass');
+		}
+
+		&_builder {
+			@include icon('builder');
+		}
+
+		&_build {
+			@include icon('build');
+		}
+	}
+	
+	&__title {
+		$line-height: 34;
+		$m-b: 38;
+		$p-lr: 30;
+		
+		font-size: em(30);
+		font-weight: 700;
+		text-transform: capitalize;
+
+		@include mq-down(sm) {
+			line-height: rem($line-height);
+			margin-bottom: rem($m-b);
+			padding-left: rem($p-lr);
+			padding-right: rem($p-lr);
+		}
+		@include mq-only(md) {
+			line-height: rem($line-height / 100 * $font-size-md);
+			margin-bottom: rem($m-b / 100 * $font-size-md);
+			padding-left: rem($p-lr / 100 * $font-size-md);
+			padding-right: rem($p-lr / 100 * $font-size-md);
+		}
+		@include mq-only(lg) {
+			line-height: rem($line-height / 100 * $font-size-lg);
+			margin-bottom: rem($m-b / 100 * $font-size-lg);
+			padding-left: rem($p-lr / 100 * $font-size-lg);
+			padding-right: rem($p-lr / 100 * $font-size-lg);
+		}
+		@include mq-up(xs) {
+			line-height: $line-height+px;
+			margin-bottom: $m-b+px;
+			padding-left: $p-lr+px;
+			padding-right: $p-lr+px;
+		}
+	}
+	
+	&__text {
+		$m-b: 48;
+		$l-h: 30;
+		
+		font-weight: 500;
+
+		@include mq-only(md) {
+			line-height: rem($l-h / 100 * $font-size-md);
+			margin-bottom: rem($m-b / 100 * $font-size-md);
+		}
+
+		@include mq-only(lg) {
+			line-height: rem($l-h / 100 * $font-size-lg);
+			margin-bottom: rem($m-b / 100 * $font-size-lg);
+		}
+
+		@include mq-up(xs) {
+			line-height: $l-h+px;
+			margin-bottom: $m-b+px;
+		}
+	}
+}

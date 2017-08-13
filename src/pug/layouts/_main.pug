@@ -1,0 +1,33 @@
+block variables
+doctype html
+//- suppress HtmlUnknownAnchorTarget, JSUnresolvedLibraryURL, HtmlUnknownTarget
+html(lang="ru")
+	head
+		//- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- Favicon
+		link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png")
+		link(rel="manifest" href="/img/favicon/manifest.json")
+		link(rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#0495fe")
+		meta(name="theme-color" content="#0495fe")
+		
+		title Archi Next :: #{title}
+		link(rel="icon" href="img/favicon.ico" type="image/x-icon")
+		link(rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon")
+		link(rel="stylesheet" href="css/style.css")
+		block script:before
+
+	body
+		include ../includes/_header
+		block content
+		include ../includes/_footer
+
+		//- jQuery
+		script(src="js/lib/jquery-3.2.1.min.js")
+		//- Include all compiled plugins (below), or include individual files as needed
+		block script:after
+		script(src="js/main.js")

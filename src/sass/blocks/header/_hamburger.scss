@@ -1,0 +1,103 @@
+/* HAMBURGER */
+
+.hamburger {
+	$this: &;
+	$height: 31px;
+	
+	width: 42px;
+	height: $height;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 1000;
+	
+	@include mq-up(lg) {
+		display: none;
+	}
+	
+	&__item {
+		display: block;
+		position: absolute;
+		height: $height/5;
+		width: 50%;
+		background: #fff;
+		opacity: 1;
+		transform: rotate(0deg);
+		transition: .35s ease-in-out;
+		
+		&:nth-child(even) {
+			left: 50%;
+		}
+		
+		&:nth-child(odd) {
+			left: 0;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2) {
+			top: 0;
+		}
+
+		&:nth-child(3),
+		&:nth-child(4) {
+			top: $height/5*2;
+		}
+
+		&:nth-child(5),
+		&:nth-child(6) {
+			top: $height/5*4;
+		}
+
+		
+		@at-root {
+			#{$this}_open & {
+				$top: 13px;
+				$bottom: 23px;
+
+				background-color: #d3531a;
+				
+				&:nth-child(1),
+				&:nth-child(6) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(2),
+				&:nth-child(5) {
+					transform: rotate(-45deg);
+				}
+				
+				&:nth-child(1) {
+					left: 5px;
+					top: $top;
+				}
+				
+				&:nth-child(2) {
+					left: calc(50% - 5px);
+					top: $top;
+				}
+				
+				&:nth-child(3) {
+					left: -50%;
+					opacity: 0;
+				}
+				
+				&:nth-child(4) {
+					left: 100%;
+					opacity: 0;
+				}
+				
+				&:nth-child(5) {
+					left: 5px;
+					top: $bottom;
+				}
+				
+				&:nth-child(6) {
+					left: calc(50% - 5px);
+					top: $bottom;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/icons/icons.eot');
+	src: url('../fonts/icons/icons.eot?#iefix') format('eot'),
+	url('../fonts/icons/icons.woff2') format('woff2'),
+	url('../fonts/icons/icons.woff') format('woff'),
+	url('../fonts/icons/icons.ttf') format('truetype'),
+	url('../fonts/icons/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow_circle_left {
+	$char: "\E001";
+}
+	@if $filename == arrow_circle_right {
+	$char: "\E002";
+}
+	@if $filename == build {
+	$char: "\E003";
+}
+	@if $filename == builder {
+	$char: "\E004";
+}
+	@if $filename == compass {
+	$char: "\E005";
+}
+	@if $filename == facebook {
+	$char: "\E006";
+}
+	@if $filename == google_plus {
+	$char: "\E007";
+}
+	@if $filename == logo {
+	$char: "\E008";
+}
+	@if $filename == pinterest {
+	$char: "\E009";
+}
+	@if $filename == twitter {
+	$char: "\E00A";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: after, $extend: true) {
+&:#{$insert} {
+	@if $extend {
+		@extend %icon;
+	} @else {
+		@include icon-styles;
+	}
+	content: icon-char($filename);
+}
+}
+
+.icon-arrow_circle_left {
+	@include icon(arrow_circle_left);
+}
+.icon-arrow_circle_right {
+	@include icon(arrow_circle_right);
+}
+.icon-build {
+	@include icon(build);
+}
+.icon-builder {
+	@include icon(builder);
+}
+.icon-compass {
+	@include icon(compass);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-google_plus {
+	@include icon(google_plus);
+}
+.icon-logo {
+	@include icon(logo);
+}
+.icon-pinterest {
+	@include icon(pinterest);
+}
+.icon-twitter {
+	@include icon(twitter);
+}

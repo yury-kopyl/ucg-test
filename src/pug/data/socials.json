@@ -1,0 +1,22 @@
+[
+	{
+		"title": "facebook",
+		"ico": "fb",
+		"url": "#facebook"
+	},
+	{
+		"title": "twitter",
+		"ico": "tw",
+		"url": "#twitter"
+	},
+	{
+		"title": "pinterest",
+		"ico": "pint",
+		"url": "#pinterest"
+	},
+	{
+		"title": "google+",
+		"ico": "gplus",
+		"url": "#google-plus"
+	}
+]

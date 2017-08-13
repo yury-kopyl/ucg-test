@@ -1,0 +1,43 @@
+/* LOGO */
+
+.logo {
+	$this: &;
+	
+	font-family: $font-family-Montserrat;
+	font-weight: 300;
+	font-size: rem(34);
+	line-height: rem(30);
+	text-transform: uppercase;
+	
+	&__link {
+		color: #fff;
+		
+		&:hover {
+			color: #fff;
+		}
+	}
+	
+	&__ico {
+		font-size: rem(38);
+		line-height: 1;
+		margin-right: 30px;
+		transition: all .3s ease 0s;
+		
+		@include icon('logo');
+		&:after {
+			vertical-align: -7px;
+		}
+		
+		@at-root {
+			#{$this}__link:hover & {
+				color: $color-blue;
+			}
+		}
+	}
+	
+	&__text {
+		&_bold {
+			font-weight: 600;
+		}
+	}
+}

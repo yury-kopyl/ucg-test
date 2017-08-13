@@ -1,0 +1,83 @@
+/* MENU */
+
+.menu {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: $font-family-Montserrat;
+	@include spacing(25, rem);
+	@include clearfix;
+	
+	@include mq-down(xs) {
+		@at-root .hamburger_open ~ .header & {
+			height: 260px;
+			transition-delay: 0s;
+		}
+	}
+	@include mq-between(sm, md) {
+		@at-root .hamburger_open ~ .header & {
+			height: 332px;
+			transition-delay: 0s;
+		}
+	}
+	@include mq-down(md) {
+		text-align: center;
+		height: 0;
+		transition: all .5s ease .2s;
+		overflow: hidden;
+		background-color: #111111;
+	}
+	@include mq-up(lg) {
+		text-align: right;
+		line-height: rem(30);
+	}
+	
+	
+	&__item {
+		@include mq-down(md) {
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+			
+			&:first-child {
+				padding-top: rem(20);
+			}
+			
+			&:last-child {
+				padding-bottom: rem(20);
+			}
+		}
+		@include mq-up(lg) {
+			display: inline-block;
+		}
+		
+		
+		& + & {
+			@include mq-only(lg) {
+				margin-left: 35px;
+			}
+			@include mq-up(xl) {
+				margin-left: 55px;
+			}
+		}
+	}
+	
+	&__link {
+		color: #fff;
+		
+		@include mq-down(md) {
+			line-height: rem(35);
+			display: inline-block;
+			padding-left: rem(15);
+			padding-right: rem(15);
+		}
+		
+		&_active {
+			@include mq-down(md) {
+				text-decoration: underline;
+			}
+			
+			@include mq-up(lg) {
+				border-bottom: 2px solid;
+			}
+		}
+	}
+}

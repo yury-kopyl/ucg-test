@@ -1,0 +1,40 @@
+extends layouts/_main
+
+block variables
+	-var title = "Main"
+
+block script:after
+	script(src="js/lib/slick.min.js")
+
+block content
+	.container.section-card
+		.row
+			each item, i in cards
+				.col-12.col-md-6.col-lg-4(class=i == 2 ? 'col-offset-md-3 col-gutter-md' : '' class=i>0 ? 'col-gutter col-gutter-sm' : '')
+					.card
+						.card__ico(class="card__ico_" + item.ico)
+						.card__title=item.title
+						.card__text=item.text
+						a.btn.btn_primary(href=item.url) Read more
+					
+	.container
+		.row.article
+			each item in articles
+				.col-xl-6.article__img-box
+					a.img-hover(href=item.url)
+						img.article__img(src=item.src alt=item.title)
+				.col-xl-6.article__text-box
+					h2=item.title
+					.article__text=item.text
+					a.btn.btn_primary(href=item.url) Read more
+				
+	.container
+		h2 Our projects
+		
+	.projects.js-slick
+		each item in projects
+			a.projects__link(href=item.url)
+				img.projects__img(src=item.src alt=item.title)
+		each item in projects
+			a.projects__link(href=item.url)
+				img(src=item.src alt=item.title)

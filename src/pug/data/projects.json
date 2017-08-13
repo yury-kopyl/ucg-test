@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Project 1",
+		"src": "resource/projects/project-1.jpg",
+		"url": "#project-1"
+	},
+	{
+		"title": "Project 2",
+		"src": "resource/projects/project-2.jpg",
+		"url": "#project-2"
+	},
+	{
+		"title": "Project 3",
+		"src": "resource/projects/project-3.jpg",
+		"url": "#project-3"
+	},
+	{
+		"title": "Project 4",
+		"src": "resource/projects/project-4.jpg",
+		"url": "#project-4"
+	}
+]

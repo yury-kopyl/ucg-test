@@ -1,0 +1,5 @@
+// px => rem
+@function em($px) {
+	$emSize: $px / 18;
+	@return #{$emSize}em;
+}

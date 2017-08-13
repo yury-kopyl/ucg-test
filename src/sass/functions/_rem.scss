@@ -1,0 +1,5 @@
+// px => rem
+@function rem($px) {
+	$remSize: $px / 18;
+	@return #{$remSize}rem;
+}

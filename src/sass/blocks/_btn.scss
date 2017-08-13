@@ -1,0 +1,28 @@
+/* BTN */
+
+.btn {
+	display: inline-block;
+	line-height: 30px;
+	@include spacing(25, 18);
+	border-radius: 22px;
+	padding: 7px 35px;
+	transition: all .3s ease 0s;
+	text-align: center;
+	white-space: nowrap;
+	text-transform: capitalize;
+	font-weight: 600;
+	
+	/* Mods */
+	&_primary {
+		color: #999999;
+		border: 2px solid #cccccc;
+		background-color: #fff;
+
+		&:hover {
+			color: #fff;
+			border-color: #0169b4;
+			background-color: #0169b4;
+			box-shadow: 0 0 16px 0 rgba(1, 105, 180, .26);
+		}
+	}
+}

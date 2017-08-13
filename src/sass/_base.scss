@@ -1,0 +1,61 @@
+/* BASE */
+
+html, body {
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+	background-color: $base-bg;
+	color: $base-text-color;
+	box-sizing: border-box;
+	
+	@include mq-down(xs) {
+		font-size: 14px;
+	}
+	
+	@include mq-up(sm) {
+		font-size: $base-font-size;
+	}
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a {
+	color: $base-link-color;
+	text-decoration: none;
+	transition: color .3s ease 0s;
+
+	&:hover {
+		color: $base-link-color_hover;
+	}
+}
+
+:focus {
+	outline: none;
+}
+
+h2 {
+	font-size: rem(50);
+	color: $color-blue;
+	@include spacing(25, 50);
+	font-weight: 500;
+	margin-top: rem(40);
+	margin-bottom: rem(40);
+	text-transform: capitalize;
+}
+
+img {
+	max-width: 100%;
+}
+
+.img-hover {
+	@include imgHover;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.overflow {
+	overflow: hidden;
+}

@@ -1,0 +1,8 @@
+footer.footer
+	.container
+		.footer__contact=template.contact
+		.footer__fax=template.fax
+		.footer__socials.socials
+			each item in socials
+				a.socials__link(href=item.url)=item.title
+					i.socials__ico(class="socials__ico_"+item.ico)

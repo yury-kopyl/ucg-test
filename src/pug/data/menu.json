@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Home",
+		"url": "#home"
+	},
+	{
+		"title": "Projects",
+		"url": "#projects"
+	},
+	{
+		"title": "Solutions",
+		"url": "#solutions"
+	},
+	{
+		"title": "Blog",
+		"url": "#blog"
+	},
+	{
+		"title": "Contact",
+		"url": "#contact"
+	}
+]

@@ -1,0 +1,10 @@
+/* SECTION-CARD */
+
+.section-card {
+	@include mq-down(xs) {
+		margin-top: -300px;
+	}
+	@include mq-up(sm) {
+		margin-top: -201px;
+	}
+}

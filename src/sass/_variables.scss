@@ -1,0 +1,41 @@
+// custom fonts
+$font-family-Montserrat: 'Montserrat', sans-serif;
+$font-family-Raleway: 'Raleway', sans-serif;
+
+// colors
+$color-blue: #0169b4;
+$color-gray: #666666;
+
+// base
+$base-font-size: 18px;
+$base-line-height: 1;
+$base-font-family: $font-family-Raleway;
+$base-font-style: normal;
+$base-font-weight: 500;
+
+$base-bg: #f5f5f5;
+$base-text-color: $color-gray;
+$base-link-color: $color-blue;
+$base-link-color_hover: lighten($color-blue, 15);
+
+// main variables
+$grid-breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 992px,
+		xl: 1200px
+) !default;
+
+$container-max-widths: (
+		sm: 540px,
+		md: 720px,
+		lg: 960px,
+		xl: 1230px
+) !default;
+
+// Number of columns in the grid.
+$grid-columns: 12 !default;
+
+// Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 30px !default;

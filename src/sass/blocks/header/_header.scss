@@ -1,0 +1,86 @@
+/* HEADER */
+
+.header {
+	background: url(../img/header-bg.jpg) center 0;
+	@include clearfix;
+
+	@include mq-down(xs) {
+		transition: all .5s ease 0s;
+
+		@at-root .hamburger_open ~ & {
+			margin-top: 260px;
+			transition-delay: .2s;
+		}
+	}
+
+	@include mq-between(sm, md) {
+		transition: all .5s ease 0s;
+		
+		@at-root .hamburger_open ~ & {
+			margin-top: 332px;
+			transition-delay: .2s;
+		}
+	}
+
+	@include mq-down(lg) {
+		padding-top: 50px;
+		height: 662px;
+	}
+
+	@include mq-up(xl) {
+		padding-top: 110px;
+		height: 862px;
+	}
+	
+	
+	&__logo {		
+		@include mq-down(xs) {
+			text-align: center;
+		}
+
+		@include mq-down(md) {
+			margin-top: 10px;
+		}
+		
+		@include mq-up(lg) {
+			max-width: 320px;
+			float: left;
+		}
+	}
+	
+	&__menu {
+		@include mq-down(md) {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 999;
+			visibility: hidden;
+			background-color: rgba(0, 0, 0, .7);
+			transition: all .35s ease 0s;
+			
+			@at-root .hamburger_open ~ .header .header__menu {
+				visibility: visible;
+			}
+		}
+		@include mq-up(lg) {
+			margin-left: 350px;
+		}
+	}
+	
+	&__slogan {
+		@include mq-down(xs) {
+			margin-top: 55px;
+		}
+		@include mq-between(sm, lg) {
+			margin-top: 85px;
+		}
+		@include mq-up(xl) {
+			clear: left;
+			float: left;
+			width: 50%;
+			margin-top: 145px;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* FOOTER */
+
+.footer {
+	background-color: $color-blue;
+	color: #fff;
+	text-align: center;
+	font-family: $font-family-Montserrat;
+	font-size: rem(14);
+	font-weight: 300;
+	padding-top: rem(64);
+	padding-bottom: rem(52);
+	margin-top: -2px;
+	
+	
+	&__contact {
+		margin-bottom: rem(43);
+		@include spacing(25, 18);
+	}
+	
+	&__fax {
+		margin-bottom: rem(62);
+		@include spacing(25, 18);
+	}
+}

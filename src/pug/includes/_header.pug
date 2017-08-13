@@ -1,0 +1,24 @@
+.hamburger.js-hamburger
+	span.hamburger__item
+	span.hamburger__item
+	span.hamburger__item
+	span.hamburger__item
+	span.hamburger__item
+	span.hamburger__item
+	
+header.header
+	.container.clearfix
+		.header__logo.logo
+			a.logo__link(href='/')
+				span.logo__ico
+				span.logo__text.logo__text_bold=template.site_name_start
+				span.logo__text=template.site_name_end
+
+		.header__menu.js-header__menu
+			.menu
+				each item, i in menu
+					.menu__item
+						a.menu__link(href=item.url class=i==0?'menu__link_active':'')=item.title
+
+		.header__slogan.slogan=template.slogan_start
+			span.slogan__bold=template.slogan_end

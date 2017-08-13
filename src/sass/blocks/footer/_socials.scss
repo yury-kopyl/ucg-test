@@ -1,0 +1,70 @@
+/* SOCIALS */
+
+.socials {
+	
+	&__link {
+		font-size: 0;
+		color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		
+		@include mq-up(sm) {
+			&:hover {
+				color: darken(#fff, 25);
+			}
+		}
+
+		@include mq-down(xs) {
+			transition: background-color .3s ease 0s;
+			
+			&:hover,
+			&:focus {
+				color: inherit;
+				background-color: lighten($color-blue, 15);
+			}
+		}
+
+		& + & {
+			@include mq-up(sm) {
+				margin-left: rem(50);
+			}
+		}
+	}
+
+	&__ico {
+		@include mq-down(xs) {
+			width: 65px;
+			height: 65px;
+			display: block;
+			line-height: 65px;
+		}
+
+		@include mq-up(sm) {
+			width: 58px;
+			display: block;
+		}
+		
+		&_fb {
+			font-size: rem(40);
+			
+			@include icon('facebook');
+		}
+
+		&_tw {
+			font-size: rem(30);
+			
+			@include icon('twitter');
+		}
+
+		&_pint {
+			font-size: rem(36);
+			
+			@include icon('pinterest');
+		}
+
+		&_gplus {
+			font-size: rem(36);
+			@include icon('google_plus');
+		}
+	}
+}

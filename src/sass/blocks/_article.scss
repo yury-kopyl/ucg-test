@@ -1,0 +1,33 @@
+/* ARTICLE */
+
+.article {
+	@include mq-down(xs) {
+		margin-bottom: 100px;
+	}
+	@include mq-up(sm) {
+		margin-bottom: 155px;
+	}
+	
+	@include mq-down(lg) {
+		margin-top: rem(100);
+	}
+	
+	@include mq-up(xl) {
+		margin-top: rem(159);
+	}
+	
+	&__img-box {
+		@include mq-up(xl) {
+			float: right;
+		}
+	}
+	
+	&__text {
+		line-height: rem(30);
+		margin-bottom: rem(40);
+	}
+	
+	&__img {
+		display: block;
+	}
+}

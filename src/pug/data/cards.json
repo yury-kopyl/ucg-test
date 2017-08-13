@@ -1,0 +1,20 @@
+[
+	{
+		"ico": "compass",
+		"title": "Architecture design",
+		"text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+		"url": "#card-1"
+	},
+	{
+		"ico": "builder",
+		"title": "Constructions work",
+		"text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+		"url": "#card-2"
+	},
+	{
+		"ico": "build",
+		"title": "Building assessment",
+		"text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+		"url": "card-3"
+	}
+]
